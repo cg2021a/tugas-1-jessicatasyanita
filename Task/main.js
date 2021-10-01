@@ -17,7 +17,7 @@ let gl = canvas.getContext('experimental-webgl');
 
 let vertices = [
 	...k1_alas, ...k1_atas, ...k1_shading, ...k1_layar, ...k1_keycaps,
-    ...k2_alas
+    ...k2_atas, ...k2_alas, ...k2_shading, ...k2_layar, ...k2_keycaps
 ];
 
 let vertexShaderCode = `
@@ -99,6 +99,15 @@ for (let i = 0; i < k1_keycaps.length/2; i++) {
 	color.push(b);
 	color.push(1);
 }
+for (let i = 0; i < k2_atas.length/2; i++) {
+	let r = 0.70;
+	let g = 0.70;
+	let b = 0.70;
+	color.push(r);
+	color.push(g);
+	color.push(b);
+	color.push(1);
+}
 for (let i = 0; i < k2_alas.length/2; i++) {
 	let r = 0.65;
 	let g = 0.65;
@@ -108,6 +117,34 @@ for (let i = 0; i < k2_alas.length/2; i++) {
 	color.push(b);
 	color.push(1);
 }
+for (let i = 0; i < k2_shading.length/2; i++) {
+	let r = 0.50;
+	let g = 0.50;
+	let b = 0.50;
+	color.push(r);
+	color.push(g);
+	color.push(b);
+	color.push(1);
+}
+for (let i = 0; i < k2_layar.length/2; i++) {
+	let r = 0.50;
+	let g = 0.50;
+	let b = 0.50;
+	color.push(r);
+	color.push(g);
+	color.push(b);
+	color.push(1);
+}
+for (let i = 0; i < k2_keycaps.length/2; i++) {
+	let r = 0.55;
+	let g = 0.55;
+	let b = 0.55;
+	color.push(r);
+	color.push(g);
+	color.push(b);
+	color.push(1);
+}
+
 
 let colorBuffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
@@ -124,9 +161,9 @@ gl.enableVertexAttribArray(coords);
 let dy = 0;
 let speed = 0.0043;
 function drawScene() {
-	// dy >= 0.7 ? speed = -speed : speed = speed;
-	// dy <= -0.75 ? speed = -speed : speed = speed;
-	// dy += speed;
+	dy >= 0.68 ? speed = -speed : speed = speed;
+	dy <= -0.73 ? speed = -speed : speed = speed;
+	dy += speed;
 	gl.useProgram(shaderProgram);
 	const leftObject = [
 		1.0, 0.0, 0.0, 0.0,
@@ -139,7 +176,7 @@ function drawScene() {
 		1.0, 0.0, 0.0, 0.0,
 		0.0, 1.0, 0.0, 0.0,
 		0.0, 0.0, 1.0, 0.0,
-		0.45, dy, 0.0, 1.0,
+		0.0, dy, 0.0, 1.0,
 	]
 		
 	gl.clearColor(1, 1, 1, 1);
@@ -150,8 +187,8 @@ function drawScene() {
     
     gl.drawArrays(
 		gl.TRIANGLES, 
-		0, 
-		(k2_alas.length)/2
+		(k1_alas.length + k1_atas.length + k1_shading.length + k1_layar.length + k1_keycaps.length)/2, 
+		(k2_atas.length + k2_alas.length + k2_shading.length + k2_layar.length + k2_keycaps.length)/2
 	);
 		
 	gl.uniformMatrix4fv(u_matrix, false, leftObject);
