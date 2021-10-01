@@ -150,8 +150,8 @@ function drawScene() {
     
     gl.drawArrays(
 		gl.TRIANGLES, 
-		(k1_alas.length + k1_atas.length + k1_shading.length + k1_layar.length + k1_keycaps.length)/2, 
-		(k2_alas)/2
+		0, 
+		(k2_alas.length)/2
 	);
 		
 	gl.uniformMatrix4fv(u_matrix, false, leftObject);
