@@ -179,7 +179,7 @@ function drawScene() {
 		0.0, dy, 0.0, 1.0,
 	]
 		
-	gl.clearColor(1, 1, 1, 1);
+	gl.clearColor(0.972, 0.941, 0.874, 1);
 	gl.clear(gl.COLOR_BUFFER_BIT);
 
 	const u_matrix = gl.getUniformLocation(shaderProgram, 'u_matrix');
