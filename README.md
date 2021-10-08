@@ -1,5 +1,7 @@
 # tugas-1-jessicatasyanita
 NRP: 05111940000043
+deploy threejs: https://cg2021a.github.io/tugas-1-jessicatasyanita/threejs/
+deploy calculator: https://cg2021a.github.io/tugas-1-jessicatasyanita/
 
 Benda: Kalkulator
 
