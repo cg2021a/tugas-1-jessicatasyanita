@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background: black;
+}
+div{
+    position: absolute;
+    bottom: 1rem;
+    left: 15%;
+    display: flex;
+    column-gap: 10rem;
+    align-items: center;
+}
+h1{
+  color: white;
+}
+select {
+    background: white;
+    padding: 0.5em 0.5em;
+    border-radius: 0.5rem;
+}
