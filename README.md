@@ -1,8 +1,9 @@
 # tugas-1-jessicatasyanita
 NRP: 05111940000043  
-deploy threejs: https://cg2021a.github.io/tugas-1-jessicatasyanita/threejs/  
-deploy calculator: https://cg2021a.github.io/tugas-1-jessicatasyanita/  
-deploy ball games: https://cg2021a.github.io/tugas-1-jessicatasyanita/ball%20games/
+threejs: https://cg2021a.github.io/tugas-1-jessicatasyanita/threejs/  
+calculator: https://cg2021a.github.io/tugas-1-jessicatasyanita/  
+ball games: https://cg2021a.github.io/tugas-1-jessicatasyanita/ball%20games/
+Pertemuan 8: https://cg2021a.github.io/tugas-1-jessicatasyanita/tugas-individu-8/
 
 
 Benda: Kalkulator
