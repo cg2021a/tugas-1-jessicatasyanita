@@ -2,7 +2,7 @@
 NRP: 05111940000043  
 threejs: https://cg2021a.github.io/tugas-1-jessicatasyanita/threejs/  
 calculator: https://cg2021a.github.io/tugas-1-jessicatasyanita/  
-ball games: https://cg2021a.github.io/tugas-1-jessicatasyanita/ball%20games/
+ball games: https://cg2021a.github.io/tugas-1-jessicatasyanita/ball%20games/  
 Pertemuan 8: https://cg2021a.github.io/tugas-1-jessicatasyanita/tugas-individu-8/
 
 
